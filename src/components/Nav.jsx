@@ -2,7 +2,7 @@ import { useState } from "react"
 
 export default function Nav({ languages }) {
 
-  const [id, setId] = useState(0);
+  const [id, setId] = useState(languages[0].id);
 
   return (
     <div>
@@ -18,10 +18,10 @@ export default function Nav({ languages }) {
       <div className="card">
         <div className="card-body">
           <div className="card-title">
-            <h3>{languages[id].title}</h3>
+            <h3>{languages.find(item => item.id === id).title}</h3>
           </div>
           <div className="card-text">
-            <p>{languages[id].description}</p>
+            <p>{languages.find(item => item.id === id).description}</p>
           </div>
         </div>
       </div>

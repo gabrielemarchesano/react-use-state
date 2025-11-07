@@ -1,7 +1,7 @@
 import Card from "./Card";
 import Nav from "./Nav";
 
-export default function Main(){
+export default function Main() {
 
   const languages = [
     {
@@ -36,10 +36,10 @@ export default function Main(){
     }
   ];
 
-  return(
+  return (
     <div className="container">
-      <Nav languages={languages}/>
-      <Card languages={languages}/>
+      <Nav languages={languages} />
+      {/* <Card languages={languages} /> */}
     </div>
   )
 }
